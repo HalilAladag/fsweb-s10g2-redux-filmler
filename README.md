@@ -26,26 +26,26 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 > _DOM ve film reducer fonksiyonu sizin için hazırlandı, ancak onu redux'a bağlamak size bırakıldı._
 
-- [ ] Redux store'u yaratmak için `createStore` fonksiyonunu kullanın.
-- [ ] Redux store'u React uygulaması ile ilişkilendirmek için `Provider` bileşenini kullanın.
+- [+] Redux store'u yaratmak için `createStore` fonksiyonunu kullanın.
+- [+] Redux store'u React uygulaması ile ilişkilendirmek için `Provider` bileşenini kullanın.
 
 #### Film reducerını bağlamak
 
 > _`src/reducers/movieReducers.js` içerisinde `reducer` fonksiyonu ve `initialState` öntanımlı olarak gelmektedir. Filmler datası `initialState` içerisine eklenmiştir._
 
-- [ ] `movieReducer.js` içindeki `initialState` reducer'ın başlangıç değeri olarak atanmalıdır.
+- [+] `movieReducer.js` içindeki `initialState` reducer'ın başlangıç değeri olarak atanmalıdır.
 
-- [ ] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
+- [+] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
       MovieList component'i içerisindeki `movies` datası redux store'dan çekilmelidir. `react-redux` içerisinden `useSelector` hookunu kullanarak `movies` değerine erişin.
 
-- [ ] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
+- [+] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
       `appTitle` değeri redux store'dan çekilmelidir.
 
-- [ ] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
+- [+] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
 
 #### Sil ve Film Ekle eylemlerini bağlama
 
-- [ ] `movieReducers` dosyası içerisinde `deleteMovie` için yazılmış bir kod bloğu olduğunu ve `movieActions` dosyası içerisinde ilgili **action generator**'ın zaten mevcut olduğunu unutmayın.
+- [+] `movieReducers` dosyası içerisinde `deleteMovie` için yazılmış bir kod bloğu olduğunu ve `movieActions` dosyası içerisinde ilgili **action generator**'ın zaten mevcut olduğunu unutmayın.
 
 - **Silme Action'ı: Movie componentinde** 
   - Silme işleminin tetiklemesi gereken HTML öğesini bulun ve `event handler` oluşturup ve bu DOM öğesine bağlayın.
@@ -56,24 +56,24 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 &nbsp;
 
 - **Film Ekleme Action'ı:**
-  - [ ] movieReducer.js'ye bir `ADD_MOVIE` case'i ekleyin.
-  - [ ] Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
-  - [ ] `movieActions.js`'de `addMovie` için bir action generator oluşturun.
-  - [ ] Bir filmin eklenmesini tetikleyen componenti bulun ve `addMovie` action'ını bağlayın.
-  - [ ] `addMovie`'yi çağırmak için gerekli event handlerı oluşturun ve bağlayın.
-  - [ ] Yeni bir film eklerken `id` değeri olarak `Date.now()` kullanın.
-  - [ ] Film eklendikten sonra filmler sayfasına yönlendirmek için `push('/movies/')` komutunu ekleyin.
+  - [+] movieReducer.js'ye bir `ADD_MOVIE` case'i ekleyin.
+  - [+] Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
+  - [+] `movieActions.js`'de `addMovie` için bir action generator oluşturun.
+  - [+] Bir filmin eklenmesini tetikleyen componenti bulun ve `addMovie` action'ını bağlayın.
+  - [+] `addMovie`'yi çağırmak için gerekli event handlerı oluşturun ve bağlayın.
+  - [+] Yeni bir film eklerken `id` değeri olarak `Date.now()` kullanın.
+  - [] Film eklendikten sonra filmler sayfasına yönlendirmek için `push('/movies/')` komutunu ekleyin.
 
 #### Favoriler reducerı oluşturun
 
 > _Tebrikler 👏 Artık film reducerı tamamlandığına göre, favori film özelliği için sıfırdan bir reducer oluşturabiliriz. Reducerları birleştirme (`combineReducers`) konusunda çalışacağız._
 
-- [ ] Favoriler özelliği için bir **reducer dosyası** oluşturun. Bu dosyada kullanacağınız `initialState` objesine aşağıdaki değerlerini ekleyin:
+- [+] Favoriler özelliği için bir **reducer dosyası** oluşturun. Bu dosyada kullanacağınız `initialState` objesine aşağıdaki değerlerini ekleyin:
 
   - `favorites { Film[] }`: Film nesnesini içeren bir dizi (başlangıç değeri `[]`).
   - `displayFavorites { Boolean }`: Uygulamada favorilerin göster/gizle değerini tutan bir boolean (başlangıç değeri `false`). 
 
-- [ ] `switch` deyimine `default` case'ini ekleyin.
+- [+] `switch` deyimine `default` case'ini ekleyin.
 
 - [ ] Yeni reducerınızı `./reducers/index.js` dosyasına import edin.
 
